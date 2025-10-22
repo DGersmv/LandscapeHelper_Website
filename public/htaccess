@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteBase /
+
+# Handle React Router - redirect all requests to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+# --- Разрешаем встраивание сайта во фреймы (для Archicad-плагина) ---
+Header always set Content-Security-Policy "frame-ancestors *"
+Header always set X-Frame-Options "ALLOWALL"
+
+# Cache static assets
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+    Header set Cache-Control "public, immutable"
+</FilesMatch>
