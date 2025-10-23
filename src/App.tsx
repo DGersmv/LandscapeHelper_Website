@@ -12,6 +12,7 @@ import HelpDistribution from './pages/help/Distribution'
 import HelpGround from './pages/help/Ground'
 import HelpGdl from './pages/help/Gdl'
 import HelpDimensions from './pages/help/Dimensions'
+import HelpSelection from './pages/help/Selection'
 
 function App() {
   const location = useLocation()
@@ -28,6 +29,11 @@ function App() {
     }
   }, [isEmbedMode])
 
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
+
   // Use HelpLayout for help pages in embed mode
   if (location.pathname.startsWith('/help/') && isEmbedMode) {
     return (
@@ -38,6 +44,7 @@ function App() {
           <Route path="/help/ground" element={<HelpGround />} />
           <Route path="/help/gdl" element={<HelpGdl />} />
           <Route path="/help/dimensions" element={<HelpDimensions />} />
+          <Route path="/help/selection" element={<HelpSelection />} />
         </Routes>
       </HelpLayout>
     )
@@ -57,6 +64,7 @@ function App() {
         <Route path="/help/ground" element={<HelpGround />} />
         <Route path="/help/gdl" element={<HelpGdl />} />
         <Route path="/help/dimensions" element={<HelpDimensions />} />
+        <Route path="/help/selection" element={<HelpSelection />} />
       </Routes>
     </SiteLayout>
   )

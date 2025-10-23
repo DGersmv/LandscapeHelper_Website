@@ -20,7 +20,7 @@ function Download() {
             <strong>Тип:</strong> Файл дополнения (.apx)<br />
             <strong>Размер:</strong> 15.2 MB<br />
             <strong>Версия:</strong> 1.0.0 (RUS)<br />
-            <strong>Дата:</strong> 15.01.2024<br />
+            <strong>Дата:</strong> 22.10.2025<br />
             <strong>Язык:</strong> Русский<br />
             <strong>Archicad:</strong> 27
           </div>
@@ -37,7 +37,7 @@ function Download() {
           <div style={{ marginBottom: '16px' }}>
             <strong>Размер:</strong> 18.7 MB<br />
             <strong>Версия:</strong> 1.0.0<br />
-            <strong>Дата:</strong> 15.01.2024<br />
+            <strong>Дата:</strong> 22.10.2025<br />
             <strong>Статус:</strong> В разработке
           </div>
           <button className="btn btn-secondary" style={{ width: '100%', textAlign: 'center', opacity: '0.6', cursor: 'not-allowed' }}>
@@ -70,17 +70,6 @@ function Download() {
         </div>
       </div>
 
-      <div className="card">
-        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px' }}>Как обновляться</h2>
-        <ol style={{ paddingLeft: '20px' }}>
-          <li style={{ marginBottom: '12px' }}>Скачайте новую версию дополнения с этой страницы</li>
-          <li style={{ marginBottom: '12px' }}>Откройте Archicad 27</li>
-          <li style={{ marginBottom: '12px' }}>Перейдите в <strong>Дополнения → Управление дополнениями</strong></li>
-          <li style={{ marginBottom: '12px' }}>Удалите старую версию LandscapeHelper</li>
-          <li style={{ marginBottom: '12px' }}>Установите новое дополнение через <strong>"Установить дополнение"</strong></li>
-          <li>Перезапустите Archicad</li>
-        </ol>
-      </div>
 
       <div className="card">
         <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px' }}>Инструкция по установке</h2>
@@ -99,7 +88,7 @@ function Download() {
       <div className="card">
         <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px' }}>История изменений</h2>
         <div style={{ marginBottom: '16px' }}>
-          <h4 style={{ color: 'var(--text-primary)' }}>Версия 1.0.0 (15.01.2024)</h4>
+          <h4 style={{ color: 'var(--text-primary)' }}>Версия 1.0.0 (22.10.2025)</h4>
           <ul style={{ paddingLeft: '20px', marginTop: '8px' }}>
             <li>Первоначальный релиз</li>
             <li>Автоматическое распределение растений</li>
