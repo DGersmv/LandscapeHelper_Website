@@ -6,6 +6,30 @@ function HelpOrientation() {
     <div>
       <h1>Поворот и ориентация</h1>
       
+      <div style={{ 
+        marginTop: '16px',
+        marginBottom: '32px',
+        textAlign: 'center'
+      }}>
+        <video
+          controls
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            width: '100%',
+            maxWidth: '800px',
+            height: 'auto',
+            borderRadius: '8px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
+          }}
+        >
+          <source src="/media/Orientation/Rotate-by-angle/preview.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает видео.
+        </video>
+      </div>
+      
       <h2>Описание</h2>
       <p>Инструмент выполняет поворот, выравнивание или случайную ориентацию выделенных объектов, ламп и колонн.</p>
       

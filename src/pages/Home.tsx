@@ -12,7 +12,7 @@ function Home() {
         {
           title: 'Просмотр выбранных элементов и изменение ID',
           description: 'Показывает тип, ID и количество выделенных объектов. Позволяет массово переименовывать ID по схеме: "НовыйID - 01", "НовыйID - 02" и т.д.',
-          videoPath: '/media/Таблица выделения/Просмотр выбранных элементов/preview.mp4',
+          videoPath: '/media/Selection/View-selected-elements/preview.mp4',
           linkTo: '/help/selection'
         }
       ]
@@ -25,13 +25,13 @@ function Home() {
         {
           title: 'Распределение с шагом',
           description: 'Размещает копии выбранного объекта вдоль линии, дуги или сплайна с заданным интервалом между объектами.',
-          videoPath: '/media/Распределение/Распределение объектов вдоль кривой/preview.mp4',
+          videoPath: '/media/Distribution/Distribute-along-curve/preview.mp4',
           linkTo: '/help/distribution'
         },
         {
           title: 'Распределение по количеству',
           description: 'Размещает заданное количество копий объекта равномерно вдоль выбранной траектории.',
-          videoPath: '/media/Распределение/Шаг (мм) — Количество/preview.mp4',
+          videoPath: '/media/Distribution/Distribute-by-count/preview.mp4',
           linkTo: '/help/distribution'
         }
       ]
@@ -44,25 +44,25 @@ function Home() {
         {
           title: 'Поворот на угол',
           description: 'Поворачивает выделенные элементы на заданное значение в градусах.',
-          videoPath: '/media/Ориентация/Поворот на угол/preview.mp4',
+          videoPath: '/media/Orientation/Rotate-by-angle/preview.mp4',
           linkTo: '/help/orientation'
         },
         {
           title: 'Выровнять по оси X',
           description: 'Выставляет все элементы под углом 0° к глобальной оси X.',
-          videoPath: '/media/Ориентация/Выровнять по оси X/preview.mp4',
+          videoPath: '/media/Orientation/Align-to-X-axis/preview.mp4',
           linkTo: '/help/orientation'
         },
         {
           title: 'Случайная ориентация',
           description: 'Задаёт каждому элементу случайный угол 0–360° для естественного разброса.',
-          videoPath: '/media/Ориентация/Случайная ориентация/preview.mp4',
+          videoPath: '/media/Orientation/Random-orientation/preview.mp4',
           linkTo: '/help/orientation'
         },
         {
           title: 'Ориентация на точку',
           description: 'Разворачивает элементы в сторону выбранной на плане точки.',
-          videoPath: '/media/Ориентация/Ориентация на точку/preview.mp4',
+          videoPath: '/media/Orientation/Orient-to-point/preview.mp4',
           linkTo: '/help/orientation'
         }
       ]
@@ -75,13 +75,13 @@ function Home() {
         {
           title: 'Смещение по Z (Применить)',
           description: 'Поднимает/опускает выделенные элементы на указанное значение (мм).',
-          videoPath: '/media/Приземление/Смещение по Z — Применить/preview.mp4',
+          videoPath: '/media/Ground/Z-offset/preview.mp4',
           linkTo: '/help/ground'
         },
         {
           title: 'Посадка на Mesh (Приземлить)',
           description: 'Подбирает высоту каждого объекта по выбранной 3D-сети (рельеф).',
-          videoPath: '/media/Приземление/Посадка на Mesh — Приземлить/preview.mp4',
+          videoPath: '/media/Ground/Land-on-mesh/preview.mp4',
           linkTo: '/help/ground'
         }
       ]
@@ -94,13 +94,13 @@ function Home() {
         {
           title: 'Размеры по направлению с шагом',
           description: 'Ставит цепочку размеров строго по заданному шагу перпендикулярно направлению.',
-          videoPath: '/media/Разметка/Размеры по направлению с шагом/preview.mp4',
+          videoPath: '/media/Dimensions/Dimensions-by-direction/preview.mp4',
           linkTo: '/help/dimensions'
         },
         {
           title: 'Размеры от объектов до линии',
           description: 'Проставляет размеры от точек привязки выбранных объектов до заданной линии.',
-          videoPath: '/media/Разметка/Размеры от объектов до линии/preview.mp4',
+          videoPath: '/media/Dimensions/Dimensions-to-line/preview.mp4',
           linkTo: '/help/dimensions'
         }
       ]
@@ -113,7 +113,7 @@ function Home() {
         {
           title: 'GDL из выделения 2D',
           description: 'Формирует GDL-код из выбранных 2D-элементов, готовый к вставке в редактор объекта.',
-          videoPath: '/media/GDL/GDL из выделения 2D/preview.mp4',
+          videoPath: '/media/GDL/GDL-from-2D/preview.mp4',
           linkTo: '/help/gdl'
         }
       ]
@@ -126,6 +126,9 @@ function Home() {
         <div className="container">
           <h1>LandscapeHelper</h1>
           <p>Автоматизация ландшафтного проектирования в Archicad</p>
+          <p style={{ fontSize: '1rem', marginBottom: '32px', opacity: '0.8', fontStyle: 'italic' }}>
+            Создан архитектором для архитекторов
+          </p>
           <div className="cta-buttons">
             <Link to="/download" className="btn btn-primary">
               Скачать бесплатно

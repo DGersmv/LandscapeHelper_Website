@@ -6,31 +6,31 @@ function Examples() {
     {
       title: 'Распределение',
       description: 'Автоматическое размещение объектов вдоль кривых с заданным шагом или количеством',
-      videoPath: '/media/Распределение/Распределение объектов вдоль кривой/preview.mp4',
+      videoPath: '/media/Distribution/Distribute-along-curve/preview.mp4',
       linkTo: '/help/distribution'
     },
     {
       title: 'Ориентация',
       description: 'Умная ориентация объектов относительно рельефа и других элементов',
-      videoPath: '/media/Ориентация/Поворот на угол/preview.mp4',
+      videoPath: '/media/Orientation/Rotate-by-angle/preview.mp4',
       linkTo: '/help/orientation'
     },
     {
       title: 'Приземление',
       description: 'Размещение объектов на поверхности рельефа с учетом уклона',
-      videoPath: '/media/Приземление/Посадка на Mesh — Приземлить/preview.mp4',
+      videoPath: '/media/Ground/Land-on-mesh/preview.mp4',
       linkTo: '/help/ground'
     },
     {
       title: 'Разметка',
       description: 'Автоматическая простановка размеров и создание размерных цепочек',
-      videoPath: '/media/Разметка/Размеры по направлению с шагом/preview.mp4',
+      videoPath: '/media/Dimensions/Dimensions-by-direction/preview.mp4',
       linkTo: '/help/dimensions'
     },
     {
       title: 'GDL',
       description: 'Генерация GDL-кода из 2D-элементов для создания параметрических объектов',
-      videoPath: '/media/GDL/GDL из выделения 2D/preview.mp4',
+      videoPath: '/media/GDL/GDL-from-2D/preview.mp4',
       linkTo: '/help/gdl'
     }
   ]
