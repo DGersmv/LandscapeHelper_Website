@@ -13,6 +13,12 @@ function Home() {
           description: 'Показывает тип, ID и количество; помогает проверить выделение перед операциями.',
           videoPath: '/media/Таблица выделения/Просмотр выбранных элементов/preview.mp4',
           linkTo: '/help/distribution'
+        },
+        {
+          title: 'Изменение ID выделенных объектов',
+          description: 'Массовое переименование ID всех выделенных объектов по схеме: "НовыйID - 01", "НовыйID - 02" и т.д.',
+          videoPath: '/media/Таблица выделения/Изменение ID/preview.mp4',
+          linkTo: '/help/distribution'
         }
       ]
     },
