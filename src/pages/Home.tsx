@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import FunctionSection from '../components/FunctionSection'
+import PartnerLogo from '../components/PartnerLogo'
 
 function Home() {
   const functionSections = [
@@ -132,6 +133,56 @@ function Home() {
             <Link to="/docs" className="btn btn-secondary">
               Документация
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Блок о партнере */}
+      <section style={{ 
+        background: 'linear-gradient(135deg, #4CAF50, #2E7D32)', 
+        color: 'white', 
+        padding: '80px 0',
+        textAlign: 'center'
+      }}>
+        <div className="container">
+          <h1 style={{ 
+            marginBottom: '16px', 
+            fontSize: '3rem',
+            fontWeight: '700',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '20px'
+          }}>
+            <PartnerLogo size={48} />
+            Tashi-Ani.ru
+          </h1>
+          <p style={{ fontSize: '1.25rem', marginBottom: '32px', opacity: '0.9' }}>
+            Более 15 лет опыта в ландшафтном проектировании
+          </p>
+          <div style={{ 
+            background: 'rgba(255,255,255,0.2)', 
+            padding: '20px', 
+            borderRadius: '12px',
+            marginBottom: '24px',
+            maxWidth: '600px',
+            margin: '0 auto 24px auto'
+          }}>
+            <p style={{ margin: '0', fontSize: '1.1rem' }}>
+              <strong>🌱 90% клиентов по рекомендациям</strong><br />
+              <strong>🏗️ Решаем сложные задачи: перепады высот, затопление</strong><br />
+              <strong>💼 Личный онлайн-кабинет заказчика</strong><br />
+              <strong>🎯 От первого выезда до сдачи и сервиса</strong>
+            </p>
+          </div>
+          <div className="cta-buttons">
+            <a href="https://tashi-ani.ru" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{
+              background: 'white',
+              color: 'var(--primary-green)',
+              border: 'none'
+            }}>
+              🌐 Посетить tashi-ani.ru
+            </a>
           </div>
         </div>
       </section>

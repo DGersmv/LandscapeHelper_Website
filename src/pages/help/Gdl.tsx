@@ -1,4 +1,6 @@
 
+import PartnerLogo from '../../components/PartnerLogo'
+
 function HelpGdl() {
   return (
     <div>
@@ -66,10 +68,48 @@ function HelpGdl() {
           <span style={{ background: 'rgba(255,255,255,0.2)', padding: '8px 15px', borderRadius: '20px', fontSize: '14px' }}>
             🏦 Альфа: 2200 1539 7984 4579
           </span>
-          <span style={{ background: 'rgba(255,255,255,0.2)', padding: '8px 15px', borderRadius: '20px', fontSize: '14px' }}>
-            📱 Телефон: +7 911 1260757
-          </span>
         </div>
+      </div>
+
+      <div style={{ 
+        background: 'linear-gradient(135deg, #4CAF50, #2E7D32)', 
+        color: 'white', 
+        padding: '20px', 
+        borderRadius: '12px',
+        marginTop: '32px',
+        textAlign: 'center'
+      }}>
+        <h3 style={{ marginBottom: '12px', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+          <PartnerLogo size={20} />
+          Нужен ландшафтный проект?
+        </h3>
+        <p style={{ marginBottom: '16px', fontSize: '1rem', opacity: '0.9' }}>
+          Более 15 лет опыта в ландшафтном проектировании
+        </p>
+        <div style={{ 
+          background: 'rgba(255,255,255,0.2)', 
+          padding: '12px', 
+          borderRadius: '8px',
+          marginBottom: '16px'
+        }}>
+          <p style={{ margin: '0', fontSize: '0.95rem' }}>
+            <strong>🌱 90% клиентов по рекомендациям</strong><br />
+            <strong>🏗️ Решаем сложные задачи: перепады высот, затопление</strong><br />
+            <strong>💼 Личный онлайн-кабинет заказчика</strong>
+          </p>
+        </div>
+        <a href="https://tashi-ani.ru" target="_blank" rel="noopener noreferrer" style={{
+          background: 'white',
+          color: 'var(--primary-green)',
+          padding: '10px 20px',
+          borderRadius: '6px',
+          textDecoration: 'none',
+          fontWeight: 'bold',
+          fontSize: '0.95rem',
+          display: 'inline-block'
+        }}>
+          🌐 Посетить tashi-ani.ru
+        </a>
       </div>
     </div>
   )

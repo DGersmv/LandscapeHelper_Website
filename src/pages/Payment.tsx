@@ -1,290 +1,233 @@
 import { Link } from 'react-router-dom'
+import PartnerLogo from '../components/PartnerLogo'
 
 function Payment() {
   return (
     <div className="container" style={{ padding: '80px 0' }}>
       <h1 style={{ textAlign: 'center', marginBottom: '48px', fontSize: '2.5rem', color: 'var(--primary-green)' }}>
-        Оплата
+        Поддержка проекта
       </h1>
       
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '32px', marginBottom: '48px' }}>
-        <div className="card" style={{ border: '2px solid var(--primary-green)' }}>
-          <div style={{ background: 'var(--primary-green)', color: 'white', padding: '8px 12px', borderRadius: '4px', marginBottom: '16px', textAlign: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>
-            💳 ОПЛАТА
-          </div>
-          <h3 style={{ color: 'var(--primary-green)', marginBottom: '16px' }}>LandscapeHelper Pro</h3>
-          <p style={{ marginBottom: '24px', color: 'var(--text-secondary)' }}>
-            Полная версия плагина с расширенными возможностями
+      <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+        <div style={{ 
+          background: 'linear-gradient(135deg, var(--primary-green), #2E7D32)', 
+          color: 'white', 
+          padding: '32px', 
+          borderRadius: '16px', 
+          marginBottom: '32px',
+          boxShadow: '0 8px 32px rgba(76, 175, 80, 0.3)'
+        }}>
+          <h2 style={{ marginBottom: '16px', fontSize: '2rem' }}>🎉 LandscapeHelper - БЕСПЛАТНО!</h2>
+          <p style={{ fontSize: '1.2rem', marginBottom: '24px', opacity: '0.9' }}>
+            Полнофункциональный плагин для ландшафтного проектирования в Archicad
           </p>
-          <div style={{ marginBottom: '16px' }}>
-            <strong>Цена:</strong> 2,990 ₽<br />
-            <strong>Лицензия:</strong> Бессрочная<br />
-            <strong>Обновления:</strong> Бесплатные<br />
-            <strong>Поддержка:</strong> Включена<br />
-            <strong>Совместимость:</strong> ArchiCAD 25-27
+          <div style={{ 
+            background: 'rgba(255, 255, 255, 0.2)', 
+            padding: '16px', 
+            borderRadius: '8px',
+            marginBottom: '24px'
+          }}>
+            <p style={{ fontSize: '1.1rem', margin: '0' }}>
+              <strong>✅ Все функции доступны бесплатно</strong><br />
+              <strong>✅ Без ограничений по количеству объектов</strong><br />
+              <strong>✅ Без рекламы и водяных знаков</strong>
+            </p>
           </div>
-          <button className="btn btn-primary" style={{ width: '100%', textAlign: 'center' }}>
-            💳 Купить за 2,990 ₽
-          </button>
-        </div>
-        
-        <div className="card">
-          <h3 style={{ color: 'var(--text-secondary)', marginBottom: '16px' }}>LandscapeHelper Free</h3>
-          <p style={{ marginBottom: '24px', color: 'var(--text-secondary)' }}>
-            Базовая версия с ограниченным функционалом
-          </p>
-          <div style={{ marginBottom: '16px' }}>
-            <strong>Цена:</strong> Бесплатно<br />
-            <strong>Лицензия:</strong> Бессрочная<br />
-            <strong>Ограничения:</strong> До 10 объектов<br />
-            <strong>Поддержка:</strong> Сообщество<br />
-            <strong>Совместимость:</strong> ArchiCAD 25-27
-          </div>
-          <Link to="/download" className="btn btn-secondary" style={{ width: '100%', textAlign: 'center' }}>
+          <Link to="/download" className="btn" style={{ 
+            background: 'white', 
+            color: 'var(--primary-green)', 
+            padding: '16px 32px',
+            fontSize: '1.1rem',
+            fontWeight: 'bold',
+            textDecoration: 'none',
+            borderRadius: '8px',
+            display: 'inline-block'
+          }}>
             📥 Скачать бесплатно
           </Link>
         </div>
       </div>
 
       <div className="card">
-        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px' }}>Способы оплаты</h2>
+        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px', textAlign: 'center' }}>
+          💝 Поддержите автора
+        </h2>
+        <p style={{ textAlign: 'center', fontSize: '1.1rem', marginBottom: '32px', color: 'var(--text-secondary)' }}>
+          Если LandscapeHelper помог вам в работе, рассмотрите возможность поддержать проект. 
+          Это поможет в развитии и добавлении новых функций.
+        </p>
+        
+      </div>
+
+      <div className="card">
+        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px', textAlign: 'center' }}>
+          🎯 На что пойдут средства
+        </h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px' }}>
+          <div style={{ textAlign: 'center', padding: '20px', background: 'var(--surface)', borderRadius: '8px' }}>
+            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>🛠️</div>
+            <h4 style={{ marginBottom: '8px' }}>Разработка</h4>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              Новые функции и улучшения
+            </p>
+          </div>
+          
+          <div style={{ textAlign: 'center', padding: '20px', background: 'var(--surface)', borderRadius: '8px' }}>
+            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>📚</div>
+            <h4 style={{ marginBottom: '8px' }}>Документация</h4>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              Обучающие материалы и видео
+            </p>
+          </div>
+          
+          <div style={{ textAlign: 'center', padding: '20px', background: 'var(--surface)', borderRadius: '8px' }}>
+            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>🌐</div>
+            <h4 style={{ marginBottom: '8px' }}>Хостинг</h4>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              Сайт и серверы для проекта
+            </p>
+          </div>
+          
+          <div style={{ textAlign: 'center', padding: '20px', background: 'var(--surface)', borderRadius: '8px' }}>
+            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>💬</div>
+            <h4 style={{ marginBottom: '8px' }}>Поддержка</h4>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              Помощь пользователям
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="card">
+        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px', textAlign: 'center' }}>
+          💳 Способы поддержки
+        </h2>
+        
+        <div style={{ 
+          background: 'linear-gradient(135deg, var(--primary-green), #2E7D32)', 
+          color: 'white', 
+          padding: '24px', 
+          borderRadius: '12px',
+          marginBottom: '24px',
+          textAlign: 'center'
+        }}>
+          <h3 style={{ marginBottom: '16px', fontSize: '1.3rem' }}>
+            LandscapeHelper — плагин для автоматизации ландшафтного проектирования в ArchiCAD
+          </h3>
+          <p style={{ margin: '0 0 20px 0', fontSize: '1rem', opacity: '0.9' }}>
+            Ваша поддержка поможет развивать плагин и добавлять новые функции
+          </p>
+          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <span style={{ background: 'rgba(255,255,255,0.2)', padding: '10px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 'bold' }}>
+              💰 ЮMoney: 2204120104235425
+            </span>
+            <span style={{ background: 'rgba(255,255,255,0.2)', padding: '10px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 'bold' }}>
+              💳 Сбер: 2202 2061 3405 0090
+            </span>
+            <span style={{ background: 'rgba(255,255,255,0.2)', padding: '10px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: 'bold' }}>
+              🏦 Альфа: 2200 1539 7984 4579
+            </span>
+          </div>
+        </div>
+        
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px' }}>
           <div style={{ textAlign: 'center', padding: '20px', background: 'var(--surface)', borderRadius: '8px' }}>
             <div style={{ fontSize: '2rem', marginBottom: '12px' }}>💳</div>
-            <h4 style={{ marginBottom: '8px' }}>Банковская карта</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Visa, MasterCard, МИР</p>
+            <h4 style={{ marginBottom: '8px' }}>Банковские карты</h4>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Сбербанк, Альфа-Банк, ЮMoney</p>
+          </div>
+          
+          <div style={{ textAlign: 'center', padding: '20px', background: 'var(--surface)', borderRadius: '8px' }}>
+            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>📱</div>
+            <h4 style={{ marginBottom: '8px' }}>СБП</h4>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Система быстрых платежей</p>
           </div>
           
           <div style={{ textAlign: 'center', padding: '20px', background: 'var(--surface)', borderRadius: '8px' }}>
             <div style={{ fontSize: '2rem', marginBottom: '12px' }}>🏦</div>
             <h4 style={{ marginBottom: '8px' }}>Банковский перевод</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>СБП, Яндекс.Деньги</p>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Прямой перевод на карту</p>
           </div>
           
           <div style={{ textAlign: 'center', padding: '20px', background: 'var(--surface)', borderRadius: '8px' }}>
-            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>📱</div>
-            <h4 style={{ marginBottom: '8px' }}>Мобильные платежи</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Apple Pay, Google Pay</p>
-          </div>
-          
-          <div style={{ textAlign: 'center', padding: '20px', background: 'var(--surface)', borderRadius: '8px' }}>
-            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>💼</div>
-            <h4 style={{ marginBottom: '8px' }}>Корпоративная оплата</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Счет для организаций</p>
+            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>💰</div>
+            <h4 style={{ marginBottom: '8px' }}>Криптовалюта</h4>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Bitcoin, Ethereum</p>
           </div>
         </div>
       </div>
 
       <div className="card">
-        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px' }}>Что входит в Pro версию</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-          <div>
-            <h4 style={{ marginBottom: '12px', color: 'var(--primary-green)' }}>🚀 Расширенные функции</h4>
-            <ul style={{ paddingLeft: '20px', fontSize: '0.95rem' }}>
-              <li>Неограниченное количество объектов</li>
-              <li>Пакетная обработка</li>
-              <li>Автоматическое сохранение настроек</li>
-              <li>Расширенные фильтры</li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 style={{ marginBottom: '12px', color: 'var(--primary-green)' }}>🛠️ Дополнительные инструменты</h4>
-            <ul style={{ paddingLeft: '20px', fontSize: '0.95rem' }}>
-              <li>Массовое редактирование</li>
-              <li>Импорт/экспорт конфигураций</li>
-              <li>Пользовательские шаблоны</li>
-              <li>API для интеграции</li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 style={{ marginBottom: '12px', color: 'var(--primary-green)' }}>📞 Приоритетная поддержка</h4>
-            <ul style={{ paddingLeft: '20px', fontSize: '0.95rem' }}>
-              <li>Техническая поддержка 24/7</li>
-              <li>Персональный менеджер</li>
-              <li>Удаленная помощь</li>
-              <li>Обучение и консультации</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div className="card">
-        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px' }}>Гарантии</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px' }}>
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>🔒</div>
-            <h4 style={{ marginBottom: '8px' }}>Безопасность</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>SSL-шифрование всех платежей</p>
-          </div>
-          
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>↩️</div>
-            <h4 style={{ marginBottom: '8px' }}>Возврат средств</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>30 дней на возврат без вопросов</p>
-          </div>
-          
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>🔄</div>
-            <h4 style={{ marginBottom: '8px' }}>Обновления</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Бесплатные обновления навсегда</p>
-          </div>
-          
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>📄</div>
-            <h4 style={{ marginBottom: '8px' }}>Лицензия</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Официальная лицензия</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="card">
-        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px' }}>Часто задаваемые вопросы</h2>
-        
-        <div style={{ marginBottom: '24px' }}>
-          <h4 style={{ marginBottom: '8px' }}>Можно ли использовать Pro версию на нескольких компьютерах?</h4>
-          <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>
-            Да, лицензия позволяет использовать плагин на 3 компьютерах одновременно.
+        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px', textAlign: 'center' }}>
+          🤝 Рекомендуем партнера
+        </h2>
+        <div style={{ 
+          background: 'linear-gradient(135deg, #4CAF50, #2E7D32)', 
+          color: 'white',
+          padding: '24px', 
+          borderRadius: '12px',
+          textAlign: 'center',
+          marginBottom: '24px'
+        }}>
+          <h3 style={{ marginBottom: '16px', fontSize: '1.4rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+            <PartnerLogo size={32} />
+            Tashi-Ani.ru
+          </h3>
+          <p style={{ fontSize: '1.1rem', marginBottom: '20px', opacity: '0.9' }}>
+            Более 15 лет опыта в ландшафтном проектировании
           </p>
-        </div>
-        
-        <div style={{ marginBottom: '24px' }}>
-          <h4 style={{ marginBottom: '8px' }}>Что происходит при обновлении ArchiCAD?</h4>
-          <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>
-            Мы обновляем плагин для новых версий ArchiCAD бесплатно в течение 2 лет.
-          </p>
-        </div>
-        
-        <div style={{ marginBottom: '24px' }}>
-          <h4 style={{ marginBottom: '8px' }}>Есть ли скидки для студентов или образовательных учреждений?</h4>
-          <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>
-            Да, мы предоставляем скидку 50% для студентов и образовательных учреждений.
-          </p>
-        </div>
-        
-        <div style={{ marginBottom: '24px' }}>
-          <h4 style={{ marginBottom: '8px' }}>Можно ли получить пробную версию?</h4>
-          <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>
-            Да, доступна 14-дневная пробная версия Pro с полным функционалом.
-          </p>
-        </div>
-      </div>
-
-      <div className="card">
-        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px' }}>Правовая информация</h2>
-        
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-          <div>
-            <h4 style={{ marginBottom: '12px', color: 'var(--primary-green)' }}>📄 Пользовательское соглашение</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '12px' }}>
-              Условия использования программного обеспечения и предоставления услуг
+          <div style={{ 
+            background: 'rgba(255,255,255,0.2)', 
+            padding: '16px', 
+            borderRadius: '8px',
+            marginBottom: '20px'
+          }}>
+            <p style={{ margin: '0 0 12px 0', fontSize: '1rem' }}>
+              <strong>🌱 90% клиентов по рекомендациям</strong><br />
+              <strong>🏗️ Решаем сложные задачи: перепады высот, затопление</strong><br />
+              <strong>💼 Личный онлайн-кабинет заказчика</strong><br />
+              <strong>🎯 От первого выезда до сдачи и сервиса</strong>
             </p>
-            <a href="/legal/terms" className="btn btn-outline" style={{ fontSize: '0.9rem', padding: '8px 16px' }}>
-              Читать
-            </a>
           </div>
-          
-          <div>
-            <h4 style={{ marginBottom: '12px', color: 'var(--primary-green)' }}>🔒 Политика конфиденциальности</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '12px' }}>
-              Обработка персональных данных и защита информации пользователей
-            </p>
-            <a href="/legal/privacy" className="btn btn-outline" style={{ fontSize: '0.9rem', padding: '8px 16px' }}>
-              Читать
-            </a>
-          </div>
-          
-          <div>
-            <h4 style={{ marginBottom: '12px', color: 'var(--primary-green)' }}>📋 Публичная оферта</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '12px' }}>
-              Условия продажи программного обеспечения и оказания услуг
-            </p>
-            <a href="/legal/offer" className="btn btn-outline" style={{ fontSize: '0.9rem', padding: '8px 16px' }}>
-              Читать
-            </a>
-          </div>
-          
-          <div>
-            <h4 style={{ marginBottom: '12px', color: 'var(--primary-green)' }}>⚖️ Правовая информация</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '12px' }}>
-              Информация о продавце, лицензировании и налогообложении
-            </p>
-            <a href="/legal/info" className="btn btn-outline" style={{ fontSize: '0.9rem', padding: '8px 16px' }}>
-              Читать
-            </a>
-          </div>
+          <a href="https://tashi-ani.ru" target="_blank" rel="noopener noreferrer" style={{
+            background: 'white',
+            color: 'var(--primary-green)',
+            padding: '12px 24px',
+            borderRadius: '8px',
+            textDecoration: 'none',
+            fontWeight: 'bold',
+            display: 'inline-block'
+          }}>
+            🌐 Посетить сайт tashi-ani.ru
+          </a>
         </div>
       </div>
 
       <div className="card">
-        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px' }}>Информация о продавце</h2>
-        
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px' }}>
-          <div>
-            <h4 style={{ marginBottom: '8px' }}>Организация</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              ИП [ФИО]<br />
-              ОГРНИП: [номер]<br />
-              ИНН: [номер]
-            </p>
-          </div>
-          
-          <div>
-            <h4 style={{ marginBottom: '8px' }}>Юридический адрес</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              [Адрес регистрации]
-            </p>
-          </div>
-          
-          <div>
-            <h4 style={{ marginBottom: '8px' }}>Контактная информация</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              Email: support@landscapehelper.ru<br />
-              Телефон: +7 (XXX) XXX-XX-XX
-            </p>
-          </div>
-          
-          <div>
-            <h4 style={{ marginBottom: '8px' }}>Налогообложение</h4>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              НДС не облагается<br />
-              (УСН 6%)
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="card">
-        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px' }}>Возврат и обмен</h2>
-        
-        <div style={{ background: 'var(--surface)', padding: '20px', borderRadius: '8px', marginBottom: '20px' }}>
-          <h4 style={{ marginBottom: '12px', color: 'var(--primary-green)' }}>🔄 Политика возврата</h4>
-          <ul style={{ paddingLeft: '20px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-            <li>Возврат средств в течение 14 дней с момента покупки</li>
-            <li>Возврат возможен при технических проблемах с программным обеспечением</li>
-            <li>Возврат не производится при нарушении лицензионного соглашения</li>
-            <li>Возврат осуществляется на тот же способ оплаты, которым была произведена покупка</li>
-          </ul>
-        </div>
-        
-        <div style={{ background: 'var(--surface)', padding: '20px', borderRadius: '8px' }}>
-          <h4 style={{ marginBottom: '12px', color: 'var(--primary-green)' }}>📞 Процедура возврата</h4>
-          <ol style={{ paddingLeft: '20px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-            <li>Обратитесь в службу поддержки с заявлением о возврате</li>
-            <li>Укажите причину возврата и номер заказа</li>
-            <li>Приложите скриншоты или описание технических проблем (если применимо)</li>
-            <li>Возврат будет обработан в течение 5 рабочих дней</li>
-          </ol>
+        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px', textAlign: 'center' }}>
+          🙏 Спасибо за поддержку!
+        </h2>
+        <div style={{ 
+          background: 'linear-gradient(135deg, #E8F5E8, #F1F8E9)', 
+          padding: '24px', 
+          borderRadius: '12px',
+          textAlign: 'center'
+        }}>
+          <p style={{ fontSize: '1.1rem', marginBottom: '16px', color: 'var(--text-primary)' }}>
+            Каждая поддержка, даже самая небольшая, помогает развивать проект и делать его лучше для всех пользователей.
+          </p>
+          <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', margin: '0' }}>
+            <strong>Спасибо, что делаете ландшафтное проектирование доступнее и удобнее! 🌱</strong>
+          </p>
         </div>
       </div>
 
       <div style={{ textAlign: 'center', marginTop: '48px' }}>
         <Link to="/download" className="btn btn-primary" style={{ marginRight: '16px' }}>
-          Попробовать бесплатно
+          📥 Скачать бесплатно
         </Link>
         <Link to="/docs" className="btn btn-secondary">
-          Документация
+          📚 Документация
         </Link>
       </div>
     </div>
