@@ -28,6 +28,36 @@ function HelpGround() {
           <source src="/media/Ground/Land-on-mesh/preview.mp4" type="video/mp4" />
           Ваш браузер не поддерживает видео.
         </video>
+        
+        <div style={{ 
+          marginTop: '12px',
+          fontSize: '0.9rem',
+          color: '#666'
+        }}>
+          <p style={{ margin: '0 0 8px 0' }}>
+            Видео не загружается? Откройте в Chrome, Firefox или Edge
+          </p>
+          <button 
+            onClick={() => {
+              const videoUrl = window.location.origin + '/media/Ground/Land-on-mesh/preview.mp4';
+              navigator.clipboard.writeText(videoUrl).then(() => {
+                alert('Ссылка на видео скопирована!');
+              });
+            }}
+            style={{
+              background: 'var(--primary-green)',
+              color: 'white',
+              border: 'none',
+              padding: '8px 16px',
+              borderRadius: '6px',
+              cursor: 'pointer',
+              fontSize: '0.9rem',
+              fontWeight: 'bold'
+            }}
+          >
+            📋 Скопировать ссылку на видео
+          </button>
+        </div>
       </div>
       
       <h2>Описание</h2>
