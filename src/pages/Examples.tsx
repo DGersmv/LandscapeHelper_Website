@@ -43,7 +43,7 @@ function Examples() {
       title: 'Размеры по направлению с шагом',
       description: 'Автоматическая разметка с заданным шагом для точного проектирования',
       videoPath: '/media/Разметка/Размеры по направлению с шагом/preview.mp4',
-      linkTo: '/help/buildshell'
+      linkTo: '/help/dimensions'
     },
     {
       title: 'GDL из выделения 2D',

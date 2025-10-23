@@ -94,13 +94,13 @@ function Home() {
           title: 'Размеры по направлению с шагом',
           description: 'Ставит цепочку размеров строго по заданному шагу перпендикулярно направлению.',
           videoPath: '/media/Разметка/Размеры по направлению с шагом/preview.mp4',
-          linkTo: '/help/buildshell'
+          linkTo: '/help/dimensions'
         },
         {
           title: 'Размеры от объектов до линии',
           description: 'Проставляет размеры от точек привязки выбранных объектов до заданной линии.',
           videoPath: '/media/Разметка/Размеры от объектов до линии/preview.mp4',
-          linkTo: '/help/buildshell'
+          linkTo: '/help/dimensions'
         }
       ]
     },

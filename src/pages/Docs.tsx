@@ -122,7 +122,7 @@ function Docs() {
           <li><strong>Размеры по направлению с шагом</strong> - ставит цепочку размеров строго по заданному шагу</li>
           <li><strong>Размеры от объектов до линии</strong> - проставляет размеры от точек привязки до заданной линии</li>
         </ul>
-        <Link to="/help/buildshell" className="btn btn-outline" style={{ marginTop: '8px' }}>
+        <Link to="/help/dimensions" className="btn btn-outline" style={{ marginTop: '8px' }}>
           Подробнее
         </Link>
         

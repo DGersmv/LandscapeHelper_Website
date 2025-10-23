@@ -11,7 +11,7 @@ import HelpOrientation from './pages/help/Orientation'
 import HelpDistribution from './pages/help/Distribution'
 import HelpGround from './pages/help/Ground'
 import HelpGdl from './pages/help/Gdl'
-import HelpBuildshell from './pages/help/Buildshell'
+import HelpDimensions from './pages/help/Dimensions'
 
 function App() {
   const location = useLocation()
@@ -37,7 +37,7 @@ function App() {
           <Route path="/help/distribution" element={<HelpDistribution />} />
           <Route path="/help/ground" element={<HelpGround />} />
           <Route path="/help/gdl" element={<HelpGdl />} />
-          <Route path="/help/buildshell" element={<HelpBuildshell />} />
+          <Route path="/help/dimensions" element={<HelpDimensions />} />
         </Routes>
       </HelpLayout>
     )
@@ -56,7 +56,7 @@ function App() {
         <Route path="/help/distribution" element={<HelpDistribution />} />
         <Route path="/help/ground" element={<HelpGround />} />
         <Route path="/help/gdl" element={<HelpGdl />} />
-        <Route path="/help/buildshell" element={<HelpBuildshell />} />
+        <Route path="/help/dimensions" element={<HelpDimensions />} />
       </Routes>
     </SiteLayout>
   )
