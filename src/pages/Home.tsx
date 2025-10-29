@@ -104,19 +104,6 @@ function Home() {
           linkTo: '/help/dimensions'
         }
       ]
-    },
-    {
-      title: 'GDL',
-      icon: '⚙️',
-      color: '#607D8B',
-      functions: [
-        {
-          title: 'GDL из выделения 2D',
-          description: 'Формирует GDL-код из выбранных 2D-элементов, готовый к вставке в редактор объекта.',
-          videoPath: '/media/GDL/GDL-from-2D/preview.mp4',
-          linkTo: '/help/gdl'
-        }
-      ]
     }
   ]
 

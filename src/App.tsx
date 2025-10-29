@@ -10,7 +10,6 @@ import Payment from './pages/Payment'
 import HelpOrientation from './pages/help/Orientation'
 import HelpDistribution from './pages/help/Distribution'
 import HelpGround from './pages/help/Ground'
-import HelpGdl from './pages/help/Gdl'
 import HelpDimensions from './pages/help/Dimensions'
 import HelpSelection from './pages/help/Selection'
 
@@ -42,7 +41,6 @@ function App() {
           <Route path="/help/orientation" element={<HelpOrientation />} />
           <Route path="/help/distribution" element={<HelpDistribution />} />
           <Route path="/help/ground" element={<HelpGround />} />
-          <Route path="/help/gdl" element={<HelpGdl />} />
           <Route path="/help/dimensions" element={<HelpDimensions />} />
           <Route path="/help/selection" element={<HelpSelection />} />
         </Routes>
@@ -62,7 +60,6 @@ function App() {
         <Route path="/help/orientation" element={<HelpOrientation />} />
         <Route path="/help/distribution" element={<HelpDistribution />} />
         <Route path="/help/ground" element={<HelpGround />} />
-        <Route path="/help/gdl" element={<HelpGdl />} />
         <Route path="/help/dimensions" element={<HelpDimensions />} />
         <Route path="/help/selection" element={<HelpSelection />} />
       </Routes>
