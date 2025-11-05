@@ -1,5 +1,4 @@
 import VideoCard from './VideoCard'
-import Icon from './Icon'
 import { FaTable, FaVectorSquare, FaFolder, FaSeedling, FaCompass, FaMountain, FaRuler } from 'react-icons/fa'
 
 interface Function {
