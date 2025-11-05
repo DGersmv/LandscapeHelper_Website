@@ -171,10 +171,10 @@ function Payment() {
         }}>
           <h3 style={{ marginBottom: '16px', fontSize: '1.4rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
             <PartnerLogo size={32} />
-            Tashi-Ani.ru
+            tashi-ani.ru
           </h3>
           <p style={{ fontSize: '1.1rem', marginBottom: '20px', opacity: '0.9' }}>
-            Более 15 лет опыта в ландшафтном проектировании
+            Более 15 лет опыта в ландшафтном строительстве
           </p>
           <div style={{ 
             background: 'rgba(255,255,255,0.2)', 

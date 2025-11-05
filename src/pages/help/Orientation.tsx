@@ -132,10 +132,10 @@ function HelpOrientation() {
       }}>
         <h3 style={{ marginBottom: '12px', fontSize: '1.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
           <PartnerLogo size={20} />
-          Нужен ландшафтный проект?
+          Если вы хотите перейти от модели к реальному объекту — мы возьмём на себя реализацию.
         </h3>
         <p style={{ marginBottom: '16px', fontSize: '1rem', opacity: '0.9' }}>
-          Более 15 лет опыта в ландшафтном проектировании
+          Более 15 лет опыта в ландшафтном строительстве
         </p>
         <div style={{ 
           background: 'rgba(255,255,255,0.2)', 

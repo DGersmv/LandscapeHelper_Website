@@ -15,11 +15,24 @@ interface FunctionSectionProps {
 }
 
 function FunctionSection({ title, icon, functions, color }: FunctionSectionProps) {
+  // Проверяем, является ли icon путем к изображению (начинается с /) или эмодзи
+  const isImageIcon = icon.startsWith('/') || icon.endsWith('.png')
+  
   return (
     <section className="function-section" style={{ '--section-color': color } as React.CSSProperties}>
       <div className="container">
         <div className="section-header">
-          <div className="section-icon">{icon}</div>
+          <div className="section-icon">
+            {isImageIcon ? (
+              <img 
+                src={icon} 
+                alt={title}
+                style={{ width: '100px', height: '100px', objectFit: 'contain' }}
+              />
+            ) : (
+              icon
+            )}
+          </div>
           <h2 className="section-title">{title}</h2>
         </div>
         

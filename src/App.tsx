@@ -12,6 +12,10 @@ import HelpDistribution from './pages/help/Distribution'
 import HelpGround from './pages/help/Ground'
 import HelpDimensions from './pages/help/Dimensions'
 import HelpSelection from './pages/help/Selection'
+import HelpShell from './pages/help/Shell'
+import HelpMesh from './pages/help/Mesh'
+import HelpLayers from './pages/help/Layers'
+import HelpColumns from './pages/help/Columns'
 
 function App() {
   const location = useLocation()
@@ -43,6 +47,10 @@ function App() {
           <Route path="/help/ground" element={<HelpGround />} />
           <Route path="/help/dimensions" element={<HelpDimensions />} />
           <Route path="/help/selection" element={<HelpSelection />} />
+          <Route path="/help/shell" element={<HelpShell />} />
+          <Route path="/help/mesh" element={<HelpMesh />} />
+          <Route path="/help/layers" element={<HelpLayers />} />
+          <Route path="/help/columns" element={<HelpColumns />} />
         </Routes>
       </HelpLayout>
     )
@@ -62,6 +70,10 @@ function App() {
         <Route path="/help/ground" element={<HelpGround />} />
         <Route path="/help/dimensions" element={<HelpDimensions />} />
         <Route path="/help/selection" element={<HelpSelection />} />
+        <Route path="/help/shell" element={<HelpShell />} />
+        <Route path="/help/mesh" element={<HelpMesh />} />
+        <Route path="/help/layers" element={<HelpLayers />} />
+        <Route path="/help/columns" element={<HelpColumns />} />
       </Routes>
     </SiteLayout>
   )
