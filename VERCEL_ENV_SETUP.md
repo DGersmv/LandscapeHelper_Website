@@ -75,7 +75,7 @@ Environment: Production, Preview, Development (выберите все)
 ## Проверка
 
 После деплоя проверьте:
-1. Подключение к БД: `https://your-domain.vercel.app/api/test-db`
-2. Инициализацию БД: `https://your-domain.vercel.app/api/init-db`
-3. Генерацию лицензии через админ-панель на странице `/payment`
+1. Подключение к БД: `https://landscape.227.info/api/test-db`
+2. Инициализацию БД: `https://landscape.227.info/api/init-db`
+3. Генерацию лицензии через админ-панель на странице `https://landscape.227.info/payment`
 

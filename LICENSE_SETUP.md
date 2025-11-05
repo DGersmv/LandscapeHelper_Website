@@ -37,12 +37,12 @@
 2. Выполните запрос к API для инициализации:
 
 ```bash
-curl -X POST https://your-domain.vercel.app/api/init-db
+curl -X POST https://landscape.227.info/api/init-db
 ```
 
 Или откройте в браузере после деплоя:
 ```
-https://your-domain.vercel.app/api/init-db
+https://landscape.227.info/api/init-db
 ```
 
 #### Вариант B: Вручную через SQL
@@ -71,12 +71,12 @@ CREATE INDEX IF NOT EXISTS idx_machine_id ON licenses(machine_id);
 Проверьте подключение к базе данных:
 
 ```bash
-curl https://your-domain.vercel.app/api/test-db
+curl https://landscape.227.info/api/test-db
 ```
 
 Или откройте в браузере:
 ```
-https://your-domain.vercel.app/api/test-db
+https://landscape.227.info/api/test-db
 ```
 
 Должен вернуться ответ с текущим временем БД и версией PostgreSQL.
@@ -237,17 +237,17 @@ npm run dev
 
 ```bash
 # Генерация лицензии
-curl -X POST http://localhost:3000/api/generate-license \
+curl -X POST https://landscape.227.info/api/generate-license \
   -H "Content-Type: application/json" \
   -d '{"admin_token":"your-token","months":6,"email":"test@example.com"}'
 
 # Активация лицензии
-curl -X POST http://localhost:3000/api/activate-license \
+curl -X POST https://landscape.227.info/api/activate-license \
   -H "Content-Type: application/json" \
   -d '{"license_key":"BRPL-2024-XXXX-XXXX-XXXX-XXXX","machine_id":"AA:BB:CC:DD:EE:FF"}'
 
 # Проверка статуса
-curl http://localhost:3000/api/license-status/BRPL-2024-XXXX-XXXX-XXXX-XXXX
+curl https://landscape.227.info/api/license-status/BRPL-2024-XXXX-XXXX-XXXX-XXXX
 ```
 
 ## Troubleshooting

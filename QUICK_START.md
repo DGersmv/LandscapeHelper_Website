@@ -47,13 +47,13 @@ git push origin license-system
 После деплоя откройте в браузере:
 
 ```
-https://your-domain.vercel.app/api/init-db
+https://landscape.227.info/api/init-db
 ```
 
 Или выполните POST запрос:
 
 ```bash
-curl -X POST https://your-domain.vercel.app/api/init-db
+curl -X POST https://landscape.227.info/api/init-db
 ```
 
 Должен вернуться ответ:
@@ -69,7 +69,7 @@ curl -X POST https://your-domain.vercel.app/api/init-db
 Проверьте подключение к БД:
 
 ```
-https://your-domain.vercel.app/api/test-db
+https://landscape.227.info/api/test-db
 ```
 
 Должен вернуться ответ с информацией о БД.
