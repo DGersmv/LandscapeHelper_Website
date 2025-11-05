@@ -15,6 +15,9 @@ import HelpSelection from './pages/help/Selection'
 import HelpChangeId from './pages/help/ChangeId'
 import HelpContours from './pages/help/Contours'
 import HelpLayers from './pages/help/Layers'
+import HelpShell from './pages/help/Shell'
+import HelpMesh from './pages/help/Mesh'
+import HelpColumns from './pages/help/Columns'
 
 function App() {
   const location = useLocation()
@@ -49,6 +52,9 @@ function App() {
           <Route path="/help/change-id" element={<HelpChangeId />} />
           <Route path="/help/contours" element={<HelpContours />} />
           <Route path="/help/layers" element={<HelpLayers />} />
+          <Route path="/help/shell" element={<HelpShell />} />
+          <Route path="/help/mesh" element={<HelpMesh />} />
+          <Route path="/help/columns" element={<HelpColumns />} />
         </Routes>
       </HelpLayout>
     )
@@ -71,6 +77,9 @@ function App() {
         <Route path="/help/change-id" element={<HelpChangeId />} />
         <Route path="/help/contours" element={<HelpContours />} />
         <Route path="/help/layers" element={<HelpLayers />} />
+        <Route path="/help/shell" element={<HelpShell />} />
+        <Route path="/help/mesh" element={<HelpMesh />} />
+        <Route path="/help/columns" element={<HelpColumns />} />
       </Routes>
     </SiteLayout>
   )

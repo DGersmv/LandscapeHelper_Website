@@ -32,12 +32,23 @@ const getIcon = (iconName: string, size: number, color: string) => {
 };
 
 function FunctionSection({ title, icon, functions, color }: FunctionSectionProps) {
+  // Проверяем, является ли icon путем к изображению (начинается с /) или эмодзи
+  const isImageIcon = icon.startsWith('/') || icon.endsWith('.png')
+  
   return (
     <section className="function-section" style={{ '--section-color': color } as React.CSSProperties}>
       <div className="container">
         <div className="section-header">
           <div className="section-icon">
-            {getIcon(icon, 64, color)}
+            {isImageIcon ? (
+              <img 
+                src={icon} 
+                alt={title}
+                style={{ width: '100px', height: '100px', objectFit: 'contain' }}
+              />
+            ) : (
+              getIcon(icon, 64, color)
+            )}
           </div>
           <h2 className="section-title">{title}</h2>
         </div>
