@@ -12,6 +12,9 @@ import HelpDistribution from './pages/help/Distribution'
 import HelpGround from './pages/help/Ground'
 import HelpDimensions from './pages/help/Dimensions'
 import HelpSelection from './pages/help/Selection'
+import HelpChangeId from './pages/help/ChangeId'
+import HelpContours from './pages/help/Contours'
+import HelpLayers from './pages/help/Layers'
 
 function App() {
   const location = useLocation()
@@ -43,6 +46,9 @@ function App() {
           <Route path="/help/ground" element={<HelpGround />} />
           <Route path="/help/dimensions" element={<HelpDimensions />} />
           <Route path="/help/selection" element={<HelpSelection />} />
+          <Route path="/help/change-id" element={<HelpChangeId />} />
+          <Route path="/help/contours" element={<HelpContours />} />
+          <Route path="/help/layers" element={<HelpLayers />} />
         </Routes>
       </HelpLayout>
     )
@@ -62,6 +68,9 @@ function App() {
         <Route path="/help/ground" element={<HelpGround />} />
         <Route path="/help/dimensions" element={<HelpDimensions />} />
         <Route path="/help/selection" element={<HelpSelection />} />
+        <Route path="/help/change-id" element={<HelpChangeId />} />
+        <Route path="/help/contours" element={<HelpContours />} />
+        <Route path="/help/layers" element={<HelpLayers />} />
       </Routes>
     </SiteLayout>
   )

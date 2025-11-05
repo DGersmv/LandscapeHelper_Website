@@ -318,8 +318,10 @@ section {
 }
 
 .section-icon {
-  font-size: 3rem;
   margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-title {

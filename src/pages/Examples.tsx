@@ -26,12 +26,6 @@ function Examples() {
       description: 'Автоматическая простановка размеров и создание размерных цепочек',
       videoPath: '/media/Dimensions/Dimensions-by-direction/preview.mp4',
       linkTo: '/help/dimensions'
-    },
-    {
-      title: 'GDL',
-      description: 'Генерация GDL-кода из 2D-элементов для создания параметрических объектов',
-      videoPath: '/media/GDL/GDL-from-2D/preview.mp4',
-      linkTo: '/help/gdl'
     }
   ]
 
@@ -90,22 +84,6 @@ function Examples() {
             <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>25 минут</p>
           </div>
           
-          <div>
-            <h4 style={{ marginBottom: '12px' }}>Интеграция с GDL</h4>
-            <div style={{ 
-              background: 'var(--surface)', 
-              height: '150px', 
-              borderRadius: '8px', 
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center',
-              marginBottom: '12px',
-              color: 'var(--text-secondary)'
-            }}>
-              [Видео: Работа с GDL объектами]
-            </div>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>20 минут</p>
-          </div>
         </div>
       </div>
 
@@ -136,17 +114,6 @@ function Examples() {
             </ul>
           </div>
           
-          <div>
-            <h4 style={{ marginBottom: '12px', color: 'var(--primary-green)' }}>⚙️ Параметрическое моделирование</h4>
-            <p style={{ marginBottom: '12px' }}>
-              Создание GDL объектов и параметрических элементов
-            </p>
-            <ul style={{ paddingLeft: '20px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              <li>GDL из 2D элементов</li>
-              <li>Автоматическое масштабирование</li>
-              <li>Параметрические объекты</li>
-            </ul>
-          </div>
         </div>
       </div>
 

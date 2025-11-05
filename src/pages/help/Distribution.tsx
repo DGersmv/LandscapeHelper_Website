@@ -150,7 +150,7 @@ function HelpDistribution() {
           Нужен ландшафтный проект?
         </h3>
         <p style={{ marginBottom: '16px', fontSize: '1rem', opacity: '0.9' }}>
-          Более 15 лет опыта в ландшафтном проектировании
+          Более 15 лет опыта в ландшафтном строительстве
         </p>
         <div style={{ 
           background: 'rgba(255,255,255,0.2)', 

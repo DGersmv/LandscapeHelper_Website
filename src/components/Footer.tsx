@@ -23,10 +23,13 @@ function Footer() {
           <div className="footer-section">
             <h4>Помощь</h4>
             <ul>
+              <li><Link to="/help/selection">Таблица выделения</Link></li>
+              <li><Link to="/help/change-id">Изменение ID</Link></li>
+              <li><Link to="/help/contours">Создание контуров</Link></li>
+              <li><Link to="/help/layers">Слои</Link></li>
               <li><Link to="/help/orientation">Ориентация</Link></li>
               <li><Link to="/help/distribution">Распределение</Link></li>
               <li><Link to="/help/ground">Приземление</Link></li>
-              <li><Link to="/help/gdl">GDL</Link></li>
             </ul>
           </div>
           <div className="footer-section">

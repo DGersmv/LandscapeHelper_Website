@@ -174,7 +174,7 @@ function Payment() {
             Tashi-Ani.ru
           </h3>
           <p style={{ fontSize: '1.1rem', marginBottom: '20px', opacity: '0.9' }}>
-            Более 15 лет опыта в ландшафтном проектировании
+            Более 15 лет опыта в ландшафтном строительстве
           </p>
           <div style={{ 
             background: 'rgba(255,255,255,0.2)', 
