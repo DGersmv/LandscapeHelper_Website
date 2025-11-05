@@ -1,7 +1,64 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import PartnerLogo from '../components/PartnerLogo'
 
 function Payment() {
+  const [showAdmin, setShowAdmin] = useState(false)
+  const [adminToken, setAdminToken] = useState('')
+  const [months, setMonths] = useState(6)
+  const [email, setEmail] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [result, setResult] = useState<{ success: boolean; message: string; licenseKey?: string } | null>(null)
+
+  const handleGenerateLicense = async () => {
+    if (!adminToken) {
+      setResult({ success: false, message: 'Введите админ токен' })
+      return
+    }
+
+    setLoading(true)
+    setResult(null)
+
+    try {
+      const response = await fetch('/api/generate-license', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          admin_token: adminToken,
+          months: months,
+          email: email || undefined
+        })
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        setResult({
+          success: true,
+          message: email ? `Лицензия создана и отправлена на ${email}` : 'Лицензия создана успешно',
+          licenseKey: data.data.license_key
+        })
+        // Очищаем форму
+        setEmail('')
+      } else {
+        setResult({ success: false, message: data.error || 'Ошибка при создании лицензии' })
+      }
+    } catch (error) {
+      setResult({ success: false, message: 'Ошибка подключения к серверу' })
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const copyLicenseKey = () => {
+    if (result?.licenseKey) {
+      navigator.clipboard.writeText(result.licenseKey)
+      alert('Лицензионный ключ скопирован!')
+    }
+  }
+
   return (
     <div className="container" style={{ padding: '80px 0' }}>
       <h1 style={{ textAlign: 'center', marginBottom: '48px', fontSize: '2.5rem', color: 'var(--primary-green)' }}>
@@ -220,6 +277,164 @@ function Payment() {
             <strong>Спасибо, что делаете ландшафтное проектирование доступнее и удобнее! 🌱</strong>
           </p>
         </div>
+      </div>
+
+      {/* Админ-секция для генерации лицензий */}
+      <div className="card" style={{ marginTop: '48px', border: '2px dashed #ccc' }}>
+        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+          <button
+            onClick={() => setShowAdmin(!showAdmin)}
+            style={{
+              background: '#f0f0f0',
+              border: '1px solid #ccc',
+              padding: '8px 16px',
+              borderRadius: '6px',
+              cursor: 'pointer',
+              fontSize: '0.9rem'
+            }}
+          >
+            {showAdmin ? '🔒 Скрыть админ-панель' : '🔑 Показать админ-панель'}
+          </button>
+        </div>
+
+        {showAdmin && (
+          <div>
+            <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px', textAlign: 'center' }}>
+              🔑 Генерация лицензионных ключей
+            </h2>
+
+            <div style={{ maxWidth: '500px', margin: '0 auto' }}>
+              <div style={{ marginBottom: '20px' }}>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>
+                  Админ токен:
+                </label>
+                <input
+                  type="password"
+                  value={adminToken}
+                  onChange={(e) => setAdminToken(e.target.value)}
+                  placeholder="Введите админ токен"
+                  style={{
+                    width: '100%',
+                    padding: '12px',
+                    borderRadius: '8px',
+                    border: '1px solid #ddd',
+                    fontSize: '1rem'
+                  }}
+                />
+              </div>
+
+              <div style={{ marginBottom: '20px' }}>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>
+                  Срок действия (месяцев):
+                </label>
+                <select
+                  value={months}
+                  onChange={(e) => setMonths(Number(e.target.value))}
+                  style={{
+                    width: '100%',
+                    padding: '12px',
+                    borderRadius: '8px',
+                    border: '1px solid #ddd',
+                    fontSize: '1rem'
+                  }}
+                >
+                  <option value={6}>6 месяцев</option>
+                  <option value={12}>12 месяцев</option>
+                </select>
+              </div>
+
+              <div style={{ marginBottom: '20px' }}>
+                <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>
+                  Email (опционально):
+                </label>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="email@example.com"
+                  style={{
+                    width: '100%',
+                    padding: '12px',
+                    borderRadius: '8px',
+                    border: '1px solid #ddd',
+                    fontSize: '1rem'
+                  }}
+                />
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '4px' }}>
+                  Если указан email, лицензионный ключ будет отправлен на почту
+                </p>
+              </div>
+
+              <button
+                onClick={handleGenerateLicense}
+                disabled={loading}
+                style={{
+                  width: '100%',
+                  background: loading ? '#ccc' : 'var(--primary-green)',
+                  color: 'white',
+                  border: 'none',
+                  padding: '14px',
+                  borderRadius: '8px',
+                  fontSize: '1rem',
+                  fontWeight: 'bold',
+                  cursor: loading ? 'not-allowed' : 'pointer',
+                  marginBottom: '20px'
+                }}
+              >
+                {loading ? '⏳ Генерация...' : '✅ Сгенерировать лицензию'}
+              </button>
+
+              {result && (
+                <div style={{
+                  padding: '16px',
+                  borderRadius: '8px',
+                  background: result.success ? '#E8F5E9' : '#FFEBEE',
+                  border: `1px solid ${result.success ? '#4CAF50' : '#F44336'}`,
+                  marginTop: '20px'
+                }}>
+                  <p style={{ margin: '0 0 12px 0', color: result.success ? '#2E7D32' : '#C62828', fontWeight: 'bold' }}>
+                    {result.success ? '✅ Успешно!' : '❌ Ошибка'}
+                  </p>
+                  <p style={{ margin: '0 0 12px 0', color: 'var(--text-primary)' }}>
+                    {result.message}
+                  </p>
+                  {result.licenseKey && (
+                    <div>
+                      <p style={{ margin: '0 0 8px 0', fontWeight: 'bold' }}>Лицензионный ключ:</p>
+                      <div style={{
+                        background: 'white',
+                        padding: '12px',
+                        borderRadius: '6px',
+                        fontFamily: 'monospace',
+                        fontSize: '1.1rem',
+                        fontWeight: 'bold',
+                        color: 'var(--primary-green)',
+                        marginBottom: '8px',
+                        wordBreak: 'break-all'
+                      }}>
+                        {result.licenseKey}
+                      </div>
+                      <button
+                        onClick={copyLicenseKey}
+                        style={{
+                          background: '#2196F3',
+                          color: 'white',
+                          border: 'none',
+                          padding: '8px 16px',
+                          borderRadius: '6px',
+                          cursor: 'pointer',
+                          fontSize: '0.9rem'
+                        }}
+                      >
+                        📋 Копировать ключ
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
 
       <div style={{ textAlign: 'center', marginTop: '48px' }}>
