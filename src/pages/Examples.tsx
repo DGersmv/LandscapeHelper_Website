@@ -12,8 +12,8 @@ function Examples() {
     {
       title: 'Изменение ID',
       description: 'Массовая установка ID: позволяет присвоить одинаковый ID всем выбранным элементам',
-      videoPath: '/media/Selection/View-selected-elements/preview.mp4',
-      linkTo: '/help/selection'
+      videoPath: '/media/ID/Set_ID/preview.mp4',
+      linkTo: '/help/change-id'
     },
     {
       title: 'Распределение',

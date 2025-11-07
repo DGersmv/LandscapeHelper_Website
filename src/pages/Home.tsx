@@ -11,14 +11,21 @@ function Home() {
       functions: [
         {
           title: 'Просмотр выбранных элементов',
-          description: 'Показывает тип, ID, слой и количество выделенных объектов. Помогает проверить правильность выделения перед выполнением операций.',
+          description: 'Показывает тип, ID, слой и количество выделенных объектов. Позволяет быстро выбрать нужные группы из списка и проверить выделение перед операциями.',
           videoPath: '/media/Selection/View-selected-elements/preview.mp4',
           linkTo: '/help/selection'
-        },
+        }
+      ]
+    },
+    {
+      title: 'Изменение ID',
+      icon: '/content/to_web/id.png',
+      color: '#795548',
+      functions: [
         {
-          title: 'Изменение ID выделенных объектов',
-          description: 'Мощная функция для массового переименования ID всех выделенных объектов по схеме: "НовыйID - 01", "НовыйID - 02" и т.д.',
-          videoPath: '/media/Selection/Change-ID/preview.mp4',
+          title: 'Массовая установка ID',
+          description: 'Позволяет массово присвоить одинаковый ID всем выбранным элементам. Введите базовое имя — и все элементы получат одно имя.',
+          videoPath: '/media/ID/Set_ID/preview.mp4',
           linkTo: '/help/change-id'
         }
       ]
