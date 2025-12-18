@@ -12,8 +12,8 @@ function Examples() {
     {
       title: 'Изменение ID',
       description: 'Массовая установка ID: позволяет присвоить одинаковый ID всем выбранным элементам',
-      videoPath: '/media/Selection/View-selected-elements/preview.mp4',
-      linkTo: '/help/selection'
+      videoPath: '/media/ID/Set_ID/preview.mp4',
+      linkTo: '/help/change-id'
     },
     {
       title: 'Распределение',
@@ -81,103 +81,6 @@ function Examples() {
             linkTo={example.linkTo}
           />
         ))}
-      </div>
-
-      <div className="card">
-        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px' }}>Видео-уроки</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-          <div>
-            <h4 style={{ marginBottom: '12px' }}>Базовый курс</h4>
-            <div style={{ 
-              background: 'var(--surface)', 
-              height: '150px', 
-              borderRadius: '8px', 
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center',
-              marginBottom: '12px',
-              color: 'var(--text-secondary)'
-            }}>
-              [Видео: Основы работы с плагином]
-            </div>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>15 минут</p>
-          </div>
-          
-          <div>
-            <h4 style={{ marginBottom: '12px' }}>Продвинутые техники</h4>
-            <div style={{ 
-              background: 'var(--surface)', 
-              height: '150px', 
-              borderRadius: '8px', 
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center',
-              marginBottom: '12px',
-              color: 'var(--text-secondary)'
-            }}>
-              [Видео: Сложные сценарии использования]
-            </div>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>25 минут</p>
-          </div>
-          
-          <div>
-            <h4 style={{ marginBottom: '12px' }}>Работа со слоями</h4>
-            <div style={{ 
-              background: 'var(--surface)', 
-              height: '150px', 
-              borderRadius: '8px', 
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center',
-              marginBottom: '12px',
-              color: 'var(--text-secondary)'
-            }}>
-              [Видео: Организация элементов по слоям]
-            </div>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>15 минут</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="card">
-        <h2 style={{ color: 'var(--primary-green)', marginBottom: '24px' }}>Практические сценарии</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-          <div>
-            <h4 style={{ marginBottom: '12px', color: 'var(--primary-green)' }}>🌳 Ландшафтный дизайн</h4>
-            <p style={{ marginBottom: '12px' }}>
-              Создание естественных посадок деревьев и кустарников с учетом рельефа и зон
-            </p>
-            <ul style={{ paddingLeft: '20px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              <li>Распределение по кривым</li>
-              <li>Случайная ориентация</li>
-              <li>Приземление на рельеф</li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 style={{ marginBottom: '12px', color: 'var(--primary-green)' }}>🏛️ Городское планирование</h4>
-            <p style={{ marginBottom: '12px' }}>
-              Размещение уличной мебели, фонарей и элементов благоустройства
-            </p>
-            <ul style={{ paddingLeft: '20px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              <li>Ориентация на точку</li>
-              <li>Выравнивание по оси</li>
-              <li>Автоматическая разметка</li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 style={{ marginBottom: '12px', color: 'var(--primary-green)' }}>🏗️ Создание контуров и сеток</h4>
-            <p style={{ marginBottom: '12px' }}>
-              Автоматическое создание контуров и сеток из линий для дорожек и ландшафтных элементов
-            </p>
-            <ul style={{ paddingLeft: '20px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              <li>Контуры из линий</li>
-              <li>Сетки с привязкой к рельефу</li>
-              <li>Автоматическое создание элементов</li>
-            </ul>
-          </div>
-        </div>
       </div>
 
       <div style={{ textAlign: 'center', marginTop: '48px' }}>
